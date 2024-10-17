@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/ezhsluny/Documents/C++/OOP/homework5/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/Homework5.dir/homework5.cpp.o -c /home/ezhsluny/Documents/C++/OOP/homework5/homework5.cpp",
+  "file": "/home/ezhsluny/Documents/C++/OOP/homework5/homework5.cpp",
+  "output": "CMakeFiles/Homework5.dir/homework5.cpp.o"
+}
+]

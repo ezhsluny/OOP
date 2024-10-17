@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/ezhsluny/Documents/C++/OOP/homework5/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/homework5.dir/all
+all: CMakeFiles/Homework5.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/homework5.dir/clean
+clean: CMakeFiles/Homework5.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/homework5.dir
+# Target rules for target CMakeFiles/Homework5.dir
 
 # All Build rule for target.
-CMakeFiles/homework5.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/homework5.dir/build.make CMakeFiles/homework5.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/homework5.dir/build.make CMakeFiles/homework5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ezhsluny/Documents/C++/OOP/homework5/build/CMakeFiles --progress-num=1,2 "Built target homework5"
-.PHONY : CMakeFiles/homework5.dir/all
+CMakeFiles/Homework5.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework5.dir/build.make CMakeFiles/Homework5.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework5.dir/build.make CMakeFiles/Homework5.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ezhsluny/Documents/C++/OOP/homework5/build/CMakeFiles --progress-num=1,2 "Built target Homework5"
+.PHONY : CMakeFiles/Homework5.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/homework5.dir/rule: cmake_check_build_system
+CMakeFiles/Homework5.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ezhsluny/Documents/C++/OOP/homework5/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/homework5.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Homework5.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ezhsluny/Documents/C++/OOP/homework5/build/CMakeFiles 0
-.PHONY : CMakeFiles/homework5.dir/rule
+.PHONY : CMakeFiles/Homework5.dir/rule
 
 # Convenience name for target.
-homework5: CMakeFiles/homework5.dir/rule
-.PHONY : homework5
+Homework5: CMakeFiles/Homework5.dir/rule
+.PHONY : Homework5
 
 # clean rule for target.
-CMakeFiles/homework5.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/homework5.dir/build.make CMakeFiles/homework5.dir/clean
-.PHONY : CMakeFiles/homework5.dir/clean
+CMakeFiles/Homework5.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework5.dir/build.make CMakeFiles/Homework5.dir/clean
+.PHONY : CMakeFiles/Homework5.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

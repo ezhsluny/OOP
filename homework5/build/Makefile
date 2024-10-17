@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named homework5
+# Target rules for targets named Homework5
 
 # Build rule for target.
-homework5: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 homework5
-.PHONY : homework5
+Homework5: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Homework5
+.PHONY : Homework5
 
 # fast build rule for target.
-homework5/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/homework5.dir/build.make CMakeFiles/homework5.dir/build
-.PHONY : homework5/fast
+Homework5/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework5.dir/build.make CMakeFiles/Homework5.dir/build
+.PHONY : Homework5/fast
 
 homework5.o: homework5.cpp.o
 .PHONY : homework5.o
 
 # target to build an object file
 homework5.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/homework5.dir/build.make CMakeFiles/homework5.dir/homework5.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework5.dir/build.make CMakeFiles/Homework5.dir/homework5.cpp.o
 .PHONY : homework5.cpp.o
 
 homework5.i: homework5.cpp.i
@@ -142,7 +142,7 @@ homework5.i: homework5.cpp.i
 
 # target to preprocess a source file
 homework5.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/homework5.dir/build.make CMakeFiles/homework5.dir/homework5.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework5.dir/build.make CMakeFiles/Homework5.dir/homework5.cpp.i
 .PHONY : homework5.cpp.i
 
 homework5.s: homework5.cpp.s
@@ -150,7 +150,7 @@ homework5.s: homework5.cpp.s
 
 # target to generate assembly for a file
 homework5.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/homework5.dir/build.make CMakeFiles/homework5.dir/homework5.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Homework5.dir/build.make CMakeFiles/Homework5.dir/homework5.cpp.s
 .PHONY : homework5.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... homework5"
+	@echo "... Homework5"
 	@echo "... homework5.o"
 	@echo "... homework5.i"
 	@echo "... homework5.s"
