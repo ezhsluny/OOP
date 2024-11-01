@@ -1,14 +1,11 @@
 #include <iostream>
 
-   int obj_count = 0;
 class Time
 {
-// private:
    int hours = 0;
    int minutes = 0;
    int seconds = 0;
-
-
+   static int obj_count;
 public:
    Time() 
    {
@@ -64,37 +61,39 @@ public:
    Time& operator -=(int s)
    {
       seconds -= s;
+      Normalize();
       return *this;
    }
 
    void Normalize()
    {
-      int minutes_add = 0;
-      int hours_add = 0;
+      int carry = 0;
 
-      if (seconds > 59)
-      {
-         minutes_add = (int)seconds / 60;
+      if (seconds < 0) {
+         carry = (seconds / 60) - 1;
+         seconds = 60 + (seconds % 60);
+      } else {
+         carry = seconds / 60;
+         seconds = seconds % 60;
       }
-      else if (seconds < 0)
-      {
-         minutes_add = (int)seconds / 60 - 1;
+
+      minutes += carry;
+      carry = 0;
+      if (minutes < 0) {
+         carry = (minutes / 60) - 1;
+         minutes = 60 + (minutes % 60);
+      } else {
+         carry = minutes / 60;
+         minutes = minutes % 60;
       }
-      seconds = (seconds + 60) % 60;
-      minutes += minutes_add;
-      if (minutes > 59)
-      {
-         hours_add = (int)minutes / 60;
-      }
-      else if (minutes < 0)
-      {
-         hours_add = (int)minutes / 60 - 1;
-      }
-      minutes = (minutes + 60) % 60;
-      hours += hours_add;
+
+      hours += carry;
       hours = (hours + 24) % 24;
    }
+
 };
+
+int Time::obj_count = 0;
 
 void Time::SetSeconds(int seconds) { this->seconds = seconds; };
 
@@ -111,8 +110,11 @@ bool operator == (const Time& t, const Time& other)
 
 Time operator - (const Time& t, int s)
 {
-   return Time(t.GetHours(), t.GetMinutes(), t.GetSeconds() - s);
+   Time result(t.GetHours(), t.GetMinutes(), t.GetSeconds() - s);
+   result.Normalize();
+   return result;
 }
+
 
 std::ostream& operator << (std::ostream& out, const Time& t)
 {
@@ -131,38 +133,4 @@ std::istream& operator >> (std::istream& in, Time& t)
 
    t = Time(h, m, s);
    return in;
-}
-
-// int main()
-// {
-//    Time t;
-//    std::cin >> t;
-
-//    t -= 10;
-//    t.Normalize();
-//    std::cout << t << '\n';
-//    std::cout << t.ToSeconds() << '\n';
-//    t += 81;
-//    t.Normalize();
-//    std::cout << t << '\n';
-// }
-
-int main()
-{
-   Time t;
-   t.SetHours(1);
-   Time t2 = t;
-   t2.SetHours(2);
-   t2.PrintTime();
-   {
-       t2.SetHours(12);
-       t2.PrintTime();
-       Time t2(22, 22, 22);
-       t2.PrintTime();
-   }
-   t2.PrintTime();
-   Time t3(3, 3, 3);
-   t3 = t;
-   t3.SetHours(3);
-   t3.PrintTime();
 }

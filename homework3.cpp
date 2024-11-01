@@ -10,7 +10,7 @@ class Time
 public:
    Time() {};
    Time(int h, int m, int s) : hours(h), minutes(m), seconds(s) {}
-   Time(const Time&);
+   Time(const Time& t) : Time(t.hours, t.minutes, t.seconds){}
    ~Time() {}
 
    int GetHours() const { return hours; }
@@ -72,12 +72,7 @@ public:
    }
 };
 
-Time::Time(const Time& t)
-{
-   hours = t.hours;
-   minutes = t.minutes;
-   seconds = t.seconds;
-}
+
 
 Time operator + (const Time& t, int s)
 {

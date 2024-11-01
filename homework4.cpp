@@ -1,14 +1,12 @@
 #include <iostream>
 
-   int obj_count = 0;
 class Time
 {
-// private:
+private:
    int hours = 0;
    int minutes = 0;
    int seconds = 0;
-
-
+   static int obj_count;
 public:
    Time() 
    {
@@ -95,6 +93,8 @@ public:
       hours = (hours + 24) % 24;
    }
 };
+
+int Time::obj_count = 0;
 
 void Time::SetSeconds(int seconds) { this->seconds = seconds; };
 

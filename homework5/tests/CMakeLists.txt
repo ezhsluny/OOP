@@ -1,13 +1,18 @@
-include(FetchContent)
-FetchContent_Declare(
-    googletest
-    URL https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip
+cmake_minimum_required(VERSION 3.5)
+
+set(This test_homework5)
+
+set(Sources
+    test_homework5.cpp
 )
-FetchContent_MakeAvailable(googletest)
 
-add_executable(runTests test_homework5.cpp)
+add_executable(${This} ${Sources})
+target_link_libraries(${This} PUBLIC
+    gtest_main
+    Homework5
+)
 
-target_link_libraries(runTests gtest gtest_main)
-
-include(GoogleTest)
-gtest_discover_tests(runTests)
+add_test(
+    NAME ${This}
+    COMMAND ${This}
+)

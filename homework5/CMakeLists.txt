@@ -1,15 +1,18 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5)
 
-project(Homework5)
+set(This Homework5)
+project(${This} C CXX)
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Homework5 homework5.cpp)
+enable_testing()
 
-option(BUILD_TESTS "Build tests" OFF)
+add_subdirectory(googletest)
+add_subdirectory(tests)
 
-if(BUILD_TESTS)
-    enable_testing()
-    add_subdirectory(tests)
-endif()
+set(Sources
+    homework5.cpp
+)
+
+add_library(${This} STATIC ${Sources})

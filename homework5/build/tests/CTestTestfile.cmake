@@ -4,5 +4,5 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-include("/home/ezhsluny/Documents/C++/OOP/homework5/build/tests/runTests[1]_include.cmake")
-subdirs("../_deps/googletest-build")
+add_test(test_homework5 "/home/ezhsluny/Documents/C++/OOP/homework5/build/tests/test_homework5")
+set_tests_properties(test_homework5 PROPERTIES  _BACKTRACE_TRIPLES "/home/ezhsluny/Documents/C++/OOP/homework5/tests/CMakeLists.txt;15;add_test;/home/ezhsluny/Documents/C++/OOP/homework5/tests/CMakeLists.txt;0;")

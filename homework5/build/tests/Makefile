@@ -97,7 +97,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -172,25 +172,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/runTests.dir/rule:
-	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/runTests.dir/rule
-.PHONY : tests/CMakeFiles/runTests.dir/rule
+tests/CMakeFiles/test_homework5.dir/rule:
+	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_homework5.dir/rule
+.PHONY : tests/CMakeFiles/test_homework5.dir/rule
 
 # Convenience name for target.
-runTests: tests/CMakeFiles/runTests.dir/rule
-.PHONY : runTests
+test_homework5: tests/CMakeFiles/test_homework5.dir/rule
+.PHONY : test_homework5
 
 # fast build rule for target.
-runTests/fast:
-	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/build
-.PHONY : runTests/fast
+test_homework5/fast:
+	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_homework5.dir/build.make tests/CMakeFiles/test_homework5.dir/build
+.PHONY : test_homework5/fast
 
 test_homework5.o: test_homework5.cpp.o
 .PHONY : test_homework5.o
 
 # target to build an object file
 test_homework5.cpp.o:
-	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/test_homework5.cpp.o
+	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_homework5.dir/build.make tests/CMakeFiles/test_homework5.dir/test_homework5.cpp.o
 .PHONY : test_homework5.cpp.o
 
 test_homework5.i: test_homework5.cpp.i
@@ -198,7 +198,7 @@ test_homework5.i: test_homework5.cpp.i
 
 # target to preprocess a source file
 test_homework5.cpp.i:
-	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/test_homework5.cpp.i
+	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_homework5.dir/build.make tests/CMakeFiles/test_homework5.dir/test_homework5.cpp.i
 .PHONY : test_homework5.cpp.i
 
 test_homework5.s: test_homework5.cpp.s
@@ -206,7 +206,7 @@ test_homework5.s: test_homework5.cpp.s
 
 # target to generate assembly for a file
 test_homework5.cpp.s:
-	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/test_homework5.cpp.s
+	cd /home/ezhsluny/Documents/C++/OOP/homework5/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_homework5.dir/build.make tests/CMakeFiles/test_homework5.dir/test_homework5.cpp.s
 .PHONY : test_homework5.cpp.s
 
 # Help Target
@@ -222,7 +222,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... runTests"
+	@echo "... test_homework5"
 	@echo "... test_homework5.o"
 	@echo "... test_homework5.i"
 	@echo "... test_homework5.s"

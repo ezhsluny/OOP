@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Homework5.dir/homework5.cpp.o"
   "CMakeFiles/Homework5.dir/homework5.cpp.o.d"
-  "Homework5"
-  "Homework5.pdb"
+  "libHomework5.a"
+  "libHomework5.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
